@@ -1,0 +1,25 @@
+####################################
+# from device/samsung/universal7904-common/product.prop
+####################################
+# BPF
+ro.kernel.ebpf.supported=false
+# LMKD
+ro.lmk.use_minfree_levels=true
+ro.lmk.use_psi=false
+####################################
+# from variable ADDITIONAL_PRODUCT_PROPERTIES
+####################################
+ro.build.characteristics=default
+####################################
+# from variable PRODUCT_PRODUCT_PROPERTIES
+####################################
+ro.config.ringtone=Your_new_adventure.ogg
+ro.config.notification_sound=Eureka.ogg
+ro.config.alarm_alert=Fresh_start.ogg
+persist.sys.disable_rescue=true
+persist.sys.fflag.override.settings_provider_model=false
+lineage.updater.uri=https://raw.githubusercontent.com/SamarV-121/lineage_OTA/master/m20lte.json
+ro.support_one_handed_mode=true
+# Auto-added by post_process_props.py
+persist.sys.usb.config=adb
+# end of file

@@ -1,0 +1,17 @@
+#!/system/bin/sh
+
+# Make sure kallsyms lock is re-applied, even if interrupted
+trap : INT
+
+# Allow perf to read kallsyms
+echo 1 > /proc/sys/kernel/kptr_restrict
+
+# Launch perf with requested arguments and save return code
+_perf "$@"
+ret=$?
+
+# Re-lock kallsyms for security
+echo 2 > /proc/sys/kernel/kptr_restrict
+
+# Propagate perf's return code
+exit $ret
